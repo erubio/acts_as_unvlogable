@@ -112,6 +112,7 @@ At this moment we support the following video services:
 -   [Marca.tv](http://www.marca.tv/)
 -   [Dalealplay](http://www.dalealplay.com/)
 -   [RuTube](http://www.rutube.ru/)
+-   [Flotrack](http://www.flotrack.org)
 
 We are always open to incude new services.
 

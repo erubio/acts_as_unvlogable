@@ -404,6 +404,33 @@ class ActsAsUnvlogableTest < Test::Unit::TestCase
         assert_raise(ArgumentError, "Unsuported url or service") { UnvlogIt.new("http://rutube.ru/tracks/abdcd.html?v=523423") }
       end
     end
+    
+# ----------------------------------------------------------
+#   Testing Flotrack
+# ----------------------------------------------------------
+    context "with a flotrack video url" do
+      setup do
+        @videotron = UnvlogIt.new("http://www.flotrack.org/videos/coverage/view_video/234973-usatf-road-mile-championships/176763-carrie-and-megan-post-race-usatf-mile-road-championships")
+      end
+
+      should "initialize a Flotrack instance" do
+        assert_equal VgFlotrack, @videotron.instance_values['object'].class
+        assert_equal "http://www.flotrack.org/videos/coverage/view_video/234973-usatf-road-mile-championships/176763-carrie-and-megan-post-race-usatf-mile-road-championships", @videotron.instance_values['object'].instance_values['url']
+        assert_not_nil @videotron.instance_values['object'].instance_values['emb']
+        assert_not_nil @videotron.instance_values['object'].instance_values['flashvars']
+        assert_not_nil @videotron.instance_values['object'].instance_values['args']
+      end
+
+      should "return the video properties" do
+        check_video_attributes({:title => "Carrie and Megan Post Race- USATF Mile Road Championships.", :service => "Flotrack"})
+      end
+    end
+
+    context "with an invalid Flotrack video url" do
+      should "raise an ArgumentError exception" do
+        assert_raise(ArgumentError, "Unsuported url or service") { UnvlogIt.new("http://www.flotrack.org/resources") }
+      end
+    end
 
   protected
   
