@@ -9,7 +9,7 @@ class VgFlotrack
 
   def initialize(url=nil, options={})
     @url = url
-    raise unless @url.match(/play|speaker|coverage/) 
+    raise unless @url.match %r{flotrack.org/videos/(play|speaker|coverage)/}
     @emb = Hpricot(open(url))
     @flashvars = CGI::unescapeHTML(@emb.to_s).split("flashvars=\"")[1].split("\"")[0]
     @args = CGI::parse(@flashvars)
