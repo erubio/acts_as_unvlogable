@@ -28,7 +28,7 @@ class VgFlotrack
   end
 
   def embed_html(width=425, height=344, options={})
-    "<embed src='#{embed_url}' width='#{width}' height='#{height}' bgcolor='#' allowscriptaccess='always' allowfullscreen='true' flashvars='#{@flashvars}' />"
+    "<embed src='#{embed_url}' width='#{width}' height='#{height}' bgcolor='#' allowscriptaccess='always' allowfullscreen='true' flashvars='#{@flashvars}'  wmode='opaque'/>"
   end
   
   def flv

@@ -40,7 +40,7 @@ class VgMtvmusic
   end
 
   def embed_html(width=425, height=344, options={})
-    "<embed src='#{embed_url}' width='#{width}' height='#{height}' type='application/x-shockwave-flash' flashVars='dist=http://www.mtvmusic.com' allowFullScreen='true' AllowScriptAccess='never'></embed>"
+    "<embed src='#{embed_url}' width='#{width}' height='#{height}' type='application/x-shockwave-flash' flashVars='dist=http://www.mtvmusic.com' allowFullScreen='true' AllowScriptAccess='never' wmode='opaque'></embed>"
   end
   
   # this method fails depending on country restrictions

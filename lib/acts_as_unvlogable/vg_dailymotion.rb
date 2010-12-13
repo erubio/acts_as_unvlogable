@@ -26,7 +26,7 @@ class VgDailymotion
   end
 
   def embed_html(width=425, height=344, options={})
-    "<object width='#{width}' height='#{height}'><param name='movie' value='#{embed_url}&related=1'></param><param name='allowFullScreen' value='true'></param><param name='allowScriptAccess' value='always'></param><embed src='#{embed_url}&related=1' type='application/x-shockwave-flash' width='#{width}' height='#{height}' allowFullScreen='true' allowScriptAccess='always'></embed></object>"
+    "<object width='#{width}' height='#{height}'><param name='movie' value='#{embed_url}&related=1'></param><param name='allowFullScreen' value='true'></param><param name='allowScriptAccess' value='always'></param><embed src='#{embed_url}&related=1' type='application/x-shockwave-flash' width='#{width}' height='#{height}' allowFullScreen='true' allowScriptAccess='always' wmode='opaque'></embed></object>"
   end
   
   def flv

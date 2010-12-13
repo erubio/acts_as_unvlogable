@@ -28,10 +28,10 @@ class VgRutube
     return <<-"END"
     <object width="#{width}" height="#{height}"><param
       name="movie" value="#{embed_url}"></param><param
-      name="wmode" value="window"></param><param
+      name="wmode" value="opaque"></param><param
       name="allowFullScreen" value="true"></param><embed
       src="#{embed_url}" type="application/x-shockwave-flash"
-      wmode="window" width="#{width}" height="#{height}"
+      wmode="opaque" width="#{width}" height="#{height}"
       allowFullScreen="true"></embed>
     </object>
     END

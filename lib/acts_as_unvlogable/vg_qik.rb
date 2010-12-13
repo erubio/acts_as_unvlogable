@@ -30,7 +30,7 @@ class VgQik
   end
 
   def embed_html(width=425, height=344, options={})
-    "<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0' width='#{width}' height='#{height}' id='qikPlayer' align='middle'><param name='allowScriptAccess' value='sameDomain' /><param name='allowFullScreen' value='true' /><param name='movie' value='#{embed_url}' /><param name='quality' value='high' /><param name='bgcolor' value='#333333' /><embed src='#{embed_url}' quality='high' bgcolor='#333333' width='#{width}' height='#{height}' name='qikPlayer' align='middle' allowScriptAccess='sameDomain' allowFullScreen='true' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'/></object>"
+    "<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0' width='#{width}' height='#{height}' id='qikPlayer' align='middle'><param name='allowScriptAccess' value='sameDomain' /><param name='allowFullScreen' value='true' /><param name='movie' value='#{embed_url}' /><param name='quality' value='high' /><param name='bgcolor' value='#333333' /><embed src='#{embed_url}' quality='high' bgcolor='#333333' width='#{width}' height='#{height}' name='qikPlayer' align='middle' allowScriptAccess='sameDomain' allowFullScreen='true' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer' wmode='opaque'/></object>"
   end
   
   def flv

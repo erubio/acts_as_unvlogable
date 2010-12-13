@@ -27,7 +27,7 @@ class VgGoogle
   end
 
   def embed_html(width=425, height=344, options={})
-    "<embed id='VideoPlayback' src='#{embed_url}' style='width:#{width}px;height:#{height}px' allowFullScreen='true' allowScriptAccess='always' type='application/x-shockwave-flash'> </embed>"
+    "<embed id='VideoPlayback' src='#{embed_url}' style='width:#{width}px;height:#{height}px' allowFullScreen='true' allowScriptAccess='always' type='application/x-shockwave-flash' wmode='opaque'> </embed>"
   end
   
   def flv

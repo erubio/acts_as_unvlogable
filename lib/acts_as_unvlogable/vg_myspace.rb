@@ -26,7 +26,7 @@ class VgMyspace
   end
 
   def embed_html(width=425, height=344, options={})
-    "<embed src='#{embed_url}' type='application/x-shockwave-flash' width='#{width}' height='#{height}'></embed>"
+    "<embed src='#{embed_url}' type='application/x-shockwave-flash' width='#{width}' height='#{height}' wmode='opaque'></embed>"
   end
   
   def flv
